@@ -1,0 +1,51 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SaveData</title>
+</head>
+<body>
+    <h1>Football League </h1>
+    <h3><font color="RED">Add Match Result</font></h3>
+    <div>
+        <form action="/SaveData/SaveData" method="post">
+            <table border="1" bgcolor="#00FF00" height="300" width="300">
+                <tr>
+                    <td>MatchId</td>
+                    <td><input type="text" name="MatchId" /></td>
+                </tr>
+                <tr>
+                    <td>TeamName1</td>
+                    <td><input type="text" name="TeamName1" /></td>
+                </tr>
+                <tr>
+                    <td>TeamName2</td>
+                    <td><input type="text" name="TeamName2" /></td>
+                </tr>
+                <tr>
+                    <td>Status</td>
+                    <td><input type="text" name="status" /></td>
+                </tr>
+                <tr>
+                    <td>WinningTeam</td>
+                    <td><input type="text" name="WinningTeam" /></td>
+                </tr>
+                <tr>
+                    <td>Points</td>
+                    <td><input type="text" name="points" /></td>
+                </tr>
+                
+                <tr>
+                    <td colspan="2" align="center"><input type="submit" value="Save Data" /></td>
+                </tr>
+            </table>
+            @ViewBag.result
+        </form>
+    </div>
+</body>
+</html>
